@@ -1,0 +1,13 @@
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\bin\Debug\netcoreapp3.1\sr1_VectorWork.exe
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\bin\Debug\netcoreapp3.1\sr1_VectorWork.deps.json
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\bin\Debug\netcoreapp3.1\sr1_VectorWork.runtimeconfig.json
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\bin\Debug\netcoreapp3.1\sr1_VectorWork.runtimeconfig.dev.json
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\bin\Debug\netcoreapp3.1\sr1_VectorWork.dll
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\bin\Debug\netcoreapp3.1\sr1_VectorWork.pdb
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\obj\Debug\netcoreapp3.1\sr1_VectorWork.csprojAssemblyReference.cache
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\obj\Debug\netcoreapp3.1\sr1_VectorWork.AssemblyInfoInputs.cache
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\obj\Debug\netcoreapp3.1\sr1_VectorWork.AssemblyInfo.cs
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\obj\Debug\netcoreapp3.1\sr1_VectorWork.csproj.CoreCompileInputs.cache
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\obj\Debug\netcoreapp3.1\sr1_VectorWork.dll
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\obj\Debug\netcoreapp3.1\sr1_VectorWork.pdb
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr1_VectorWork\sr1_VectorWork\obj\Debug\netcoreapp3.1\sr1_VectorWork.genruntimeconfig.cache
