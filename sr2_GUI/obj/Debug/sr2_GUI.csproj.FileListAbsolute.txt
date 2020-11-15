@@ -1,0 +1,10 @@
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\bin\Debug\sr2_GUI.exe.config
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\bin\Debug\sr2_GUI.exe
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\bin\Debug\sr2_GUI.pdb
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\obj\Debug\sr2_GUI.csprojAssemblyReference.cache
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\obj\Debug\sr2_GUI.Form1.resources
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\obj\Debug\sr2_GUI.Properties.Resources.resources
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\obj\Debug\sr2_GUI.csproj.GenerateResource.cache
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\obj\Debug\sr2_GUI.csproj.CoreCompileInputs.cache
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\obj\Debug\sr2_GUI.exe
+D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\sr2_GUI\sr2_GUI\obj\Debug\sr2_GUI.pdb
