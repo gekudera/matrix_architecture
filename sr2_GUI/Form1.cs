@@ -22,15 +22,13 @@ namespace sr2_GUI
         public Form1()
         {
             InitializeComponent();
-            b = picBox.CreateGraphics();
             cons = new DrawInConsole();
-            form = new DrawInForm(b);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Console.Clear();
-            //b = picBox.CreateGraphics();
+            b = picBox.CreateGraphics();
             b.Clear(BackColor);
 
             form = new DrawInForm(b);
@@ -46,7 +44,7 @@ namespace sr2_GUI
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             Console.Clear();
-            //b = picBox.CreateGraphics();
+            b = picBox.CreateGraphics();
             b.Clear(BackColor);
 
             form = new DrawInForm(b);
@@ -67,7 +65,7 @@ namespace sr2_GUI
         private void but_sparse_Click(object sender, EventArgs e)
         {
             Console.Clear();
-           // b = picBox.CreateGraphics();
+            b = picBox.CreateGraphics();
             b.Clear(BackColor);
 
             form = new DrawInForm(b);
