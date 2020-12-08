@@ -26,7 +26,7 @@ namespace sr2_GUI
         private List<Point> points;
         private bool flag_border;
         private int count;
-        private IStrategy strotegy;
+        private IStrategy strategy;
 
 
         public DrawInForm(Graphics graph, bool is_border)
@@ -61,8 +61,8 @@ namespace sr2_GUI
             StrFormat.Alignment = StringAlignment.Center;
             StrFormat.LineAlignment = StringAlignment.Center;
 
-            strotegy = matr.GetStrategy();
-            string data_unit = strotegy.DrawConcreteUnit(matr,x,y);
+            strategy = matr.GetStrategy();
+            string data_unit = strategy.DrawConcreteUnit(matr,x,y);
             
             Rectangle rect_unit = new Rectangle(curX, curY, w, h);
             curX = curX + w;

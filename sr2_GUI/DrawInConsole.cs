@@ -15,7 +15,7 @@ namespace sr2_GUI
         private string border;
         private bool is_border;
         private int count;
-        private IStrategy strotegy;
+        private IStrategy strategy;
 
         public DrawInConsole(bool is_bord)
         {
@@ -41,8 +41,8 @@ namespace sr2_GUI
 
         public void DrawUnit(IMatrix matr, int x, int y)
         {
-            strotegy = matr.GetStrategy();
-            buf_el = strotegy.DrawConcreteUnit(matr,x,y);
+            strategy = matr.GetStrategy();
+            buf_el = strategy.DrawConcreteUnit(matr,x,y);
 
             bufer.Add(buf_el);
             bufer[bufer.LastIndexOf(buf_el)] = String.Format("| {0} |", buf_el);
