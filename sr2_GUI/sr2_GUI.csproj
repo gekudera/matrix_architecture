@@ -77,13 +77,17 @@
     </Compile>
     <Compile Include="IMatrix.cs" />
     <Compile Include="InitiatorMatrix.cs" />
+    <Compile Include="IStrategy.cs" />
     <Compile Include="IVector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renumbering_decorator.cs" />
     <Compile Include="SimpleMatrix.cs" />
+    <Compile Include="SimpleStrategy.cs" />
     <Compile Include="SimpleVector.cs" />
     <Compile Include="SomeMatrix.cs" />
     <Compile Include="SparseMatrix.cs" />
+    <Compile Include="SparseStrategy.cs" />
     <Compile Include="SparseVector.cs" />
     <Compile Include="StatisticMatrix.cs" />
     <EmbeddedResource Include="Form1.resx">

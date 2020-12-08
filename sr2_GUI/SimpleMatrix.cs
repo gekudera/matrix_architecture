@@ -17,5 +17,10 @@ namespace sr2_GUI
         {
             return new SimpleVector(co);
         }
+
+        public override IStrategy GetStrategy()
+        {
+            return (new SimpleStrategy());
+        }
     }
 }

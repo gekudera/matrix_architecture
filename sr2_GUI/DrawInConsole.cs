@@ -9,68 +9,51 @@ namespace sr2_GUI
 {
     class DrawInConsole : IDrawing
     {
-        static string SimpleElementTemplate = "{0, -4:00}";
 
         private List<string> bufer;
         private string buf_el;
         private string border;
+        private bool is_border;
+        private int count;
+        private IStrategy strotegy;
 
-        public DrawInConsole()
+        public DrawInConsole(bool is_bord)
         {
             bufer = new List<string>();
             buf_el = "";
             border = "";
+            is_border = is_bord;
         }
 
         public void DrawBorder(IMatrix matr)
         {
-            int border_len = matr.column_count * 8;
-            while (border_len-- != 0)
+            if (is_border)
             {
-                border += "-";
+                int border_len = matr.column_count * 8;
+                while (border_len-- != 0)
+                {
+                    border += "-";
+                }
+                border += "\n";
             }
-            border += "\n";
-        }
-
-        public void NewLine()
-        {
-             bufer.Add("\n");
         }
 
 
         public void DrawUnit(IMatrix matr, int x, int y)
         {
-            buf_el = "";
-            switch (matr)
-            {
-                case SimpleMatrix:
-                    {
-                        buf_el += String.Format(SimpleElementTemplate, matr.GetValue(x, y));
-                        break;
-                    }
-
-                case SparseMatrix:
-                    {
-                        if (matr.GetValue(x, y) == 0)
-                        {
-                            buf_el += "    ";
-                        }
-                        else
-                        {
-                            buf_el += String.Format(SimpleElementTemplate, matr.GetValue(x, y));
-                        }
-                        break;
-                    }
-
-
-                default:
-                    buf_el += String.Format(SimpleElementTemplate, matr.GetValue(x, y));
-                    break;
-        
-            }
+            strotegy = matr.GetStrategy();
+            buf_el = strotegy.DrawConcreteUnit(matr,x,y);
 
             bufer.Add(buf_el);
             bufer[bufer.LastIndexOf(buf_el)] = String.Format("| {0} |", buf_el);
+
+            count++;
+            if (count == matr.column_count)
+            {
+                bufer.Add("\n");
+                count = 0;
+            }
+
         }
 
         public void Print()

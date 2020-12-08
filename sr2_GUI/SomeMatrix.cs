@@ -33,13 +33,9 @@ namespace sr2_GUI
             return (matr[i].GetValue(j));
         }
 
-        public void Draw(bool border_yn, IDrawing drawer)
-        {
-            if (border_yn)
-            {
-                drawer.DrawBorder(this);
-            }
-           
+        public void Draw(IDrawing drawer)
+        {             
+            drawer.DrawBorder(this);
 
             for (int i = 0; i < row_count; i++)
             {
@@ -47,10 +43,11 @@ namespace sr2_GUI
                 {
                     drawer.DrawUnit(this, i, j);
                 }
-                drawer.NewLine();
             }
             drawer.Print();
 
         }
+
+        public abstract IStrategy GetStrategy();
     }
 }

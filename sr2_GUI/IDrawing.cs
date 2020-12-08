@@ -9,12 +9,9 @@ namespace sr2_GUI
 {
     interface IDrawing
     {
-        public void DrawBorder(IMatrix matr); //для отрисовки рамки
-        public void DrawUnit(IMatrix matr, int x, int y); //для отрисовки одной ячейки
-        public void Print();
-
-
-        public void NewLine();
+        void DrawBorder(IMatrix matr); //для отрисовки рамки
+        void DrawUnit(IMatrix matr, int x, int y); //для отрисовки одной ячейки
+        void Print();
 
     }
 }

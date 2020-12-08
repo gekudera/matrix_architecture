@@ -17,5 +17,10 @@ namespace sr2_GUI
         {
             return new SparseVector(co);
         }
+
+        public override IStrategy GetStrategy()
+        {
+           return (new SparseStrategy());
+        }
     }
 }

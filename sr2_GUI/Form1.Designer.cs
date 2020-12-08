@@ -32,6 +32,8 @@
             this.but_sparse = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.picBox = new System.Windows.Forms.PictureBox();
+            this.renumb_but = new System.Windows.Forms.Button();
+            this.back_but = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             // 
             // but_sparse
             // 
-            this.but_sparse.Location = new System.Drawing.Point(190, 36);
+            this.but_sparse.Location = new System.Drawing.Point(175, 36);
             this.but_sparse.Name = "but_sparse";
             this.but_sparse.Size = new System.Drawing.Size(135, 46);
             this.but_sparse.TabIndex = 1;
@@ -76,11 +78,33 @@
             this.picBox.TabIndex = 3;
             this.picBox.TabStop = false;
             // 
+            // renumb_but
+            // 
+            this.renumb_but.Location = new System.Drawing.Point(333, 36);
+            this.renumb_but.Name = "renumb_but";
+            this.renumb_but.Size = new System.Drawing.Size(135, 46);
+            this.renumb_but.TabIndex = 4;
+            this.renumb_but.Text = "Перенумеровать";
+            this.renumb_but.UseVisualStyleBackColor = true;
+            this.renumb_but.Click += new System.EventHandler(this.renumb_but_Click);
+            // 
+            // back_but
+            // 
+            this.back_but.Location = new System.Drawing.Point(489, 36);
+            this.back_but.Name = "back_but";
+            this.back_but.Size = new System.Drawing.Size(135, 46);
+            this.back_but.TabIndex = 5;
+            this.back_but.Text = "Восстановить";
+            this.back_but.UseVisualStyleBackColor = true;
+            this.back_but.Click += new System.EventHandler(this.back_but_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 523);
+            this.Controls.Add(this.back_but);
+            this.Controls.Add(this.renumb_but);
             this.Controls.Add(this.picBox);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.but_sparse);
@@ -99,6 +123,8 @@
         private System.Windows.Forms.Button but_sparse;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.Button renumb_but;
+        private System.Windows.Forms.Button back_but;
     }
 }
 

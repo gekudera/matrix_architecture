@@ -25,30 +25,34 @@ namespace sr2_GUI
         private Dictionary<Rectangle, string> bufer; //буфер данных
         private List<Point> points;
         private bool flag_border;
+        private int count;
+        private IStrategy strotegy;
 
 
-        public DrawInForm(Graphics graph)
+        public DrawInForm(Graphics graph, bool is_border)
         {
             g = graph;
             bufer = new Dictionary<Rectangle, string>();
             points = new List<Point>();
-            flag_border = false;
+            flag_border = is_border;
+            count = 0;
         }
 
         public void DrawBorder(IMatrix matr)
         {
-            int dlin = matr.row_count;
-            int shir = matr.column_count;
-            Point p1 = new Point(startx, starty);
-            Point p2 = new Point(startx, (dlin * h)+starty);
-            Point p3 = new Point((shir * w)+startx, (dlin * h)+starty);
-            Point p4 = new Point((shir * w)+startx, starty);
-            points.Add(p1);
-            points.Add(p2);
-            points.Add(p3);
-            points.Add(p4);
-
-            flag_border = true;
+            if (flag_border)
+            {
+                int dlin = matr.row_count;
+                int shir = matr.column_count;
+                Point p1 = new Point(startx, starty);
+                Point p2 = new Point(startx, (dlin * h) + starty);
+                Point p3 = new Point((shir * w) + startx, (dlin * h) + starty);
+                Point p4 = new Point((shir * w) + startx, starty);
+                points.Add(p1);
+                points.Add(p2);
+                points.Add(p3);
+                points.Add(p4);
+            }
         }
 
         public void DrawUnit(IMatrix matr, int x, int y)
@@ -56,36 +60,22 @@ namespace sr2_GUI
             StrFormat = new StringFormat();
             StrFormat.Alignment = StringAlignment.Center;
             StrFormat.LineAlignment = StringAlignment.Center;
-            string data_unit = "";
-            switch (matr)
-            {
-                case SimpleMatrix:
-                {
-                    data_unit = string.Format("{0,3:00}", matr.GetValue(x, y));
-                    break;
-                }
 
-                case SparseMatrix:
-                {
-                        if (matr.GetValue(x, y) == 0)
-                        data_unit = " ";
-                        else
-                        data_unit = string.Format("{0,3:00}", matr.GetValue(x, y));
-                        break;
-                }
-                default:
-                    data_unit = string.Format("{0,3:00}", matr.GetValue(x, y));
-                    break;
-            }
+            strotegy = matr.GetStrategy();
+            string data_unit = strotegy.DrawConcreteUnit(matr,x,y);
+            
             Rectangle rect_unit = new Rectangle(curX, curY, w, h);
             curX = curX + w;
-            bufer.Add(rect_unit, data_unit);
-        }
 
-        public void NewLine()
-        {
-            curX = startx;
-            curY = curY + h;
+            bufer.Add(rect_unit, data_unit);
+
+            count++;
+            if (count == matr.column_count)
+            {
+                curX = startx;
+                curY = curY + h;
+                count = 0;
+            }
         }
 
 
