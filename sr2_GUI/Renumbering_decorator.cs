@@ -59,7 +59,7 @@ namespace sr2_GUI
 
         public IStrategy GetStrategy()
         {
-            return (new SimpleStrategy());
+            return Ref_matr.GetStrategy();
         }
 
         public void Renumber_сol(int first, int second) //поменять столбики местами
