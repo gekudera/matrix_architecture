@@ -42,7 +42,7 @@
             // but_simple
             // 
             this.but_simple.Location = new System.Drawing.Point(24, 23);
-            this.but_simple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but_simple.Margin = new System.Windows.Forms.Padding(4);
             this.but_simple.Name = "but_simple";
             this.but_simple.Size = new System.Drawing.Size(169, 57);
             this.but_simple.TabIndex = 0;
@@ -53,7 +53,7 @@
             // but_sparse
             // 
             this.but_sparse.Location = new System.Drawing.Point(201, 23);
-            this.but_sparse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.but_sparse.Margin = new System.Windows.Forms.Padding(4);
             this.but_sparse.Name = "but_sparse";
             this.but_sparse.Size = new System.Drawing.Size(180, 57);
             this.but_sparse.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(75, 153);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(229, 21);
             this.checkBox1.TabIndex = 2;
@@ -78,7 +78,7 @@
             // picBox
             // 
             this.picBox.Location = new System.Drawing.Point(40, 182);
-            this.picBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBox.Margin = new System.Windows.Forms.Padding(4);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(818, 508);
             this.picBox.TabIndex = 3;
@@ -87,7 +87,7 @@
             // renumb_but
             // 
             this.renumb_but.Location = new System.Drawing.Point(445, 57);
-            this.renumb_but.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.renumb_but.Margin = new System.Windows.Forms.Padding(4);
             this.renumb_but.Name = "renumb_but";
             this.renumb_but.Size = new System.Drawing.Size(180, 57);
             this.renumb_but.TabIndex = 4;
@@ -98,7 +98,7 @@
             // back_but
             // 
             this.back_but.Location = new System.Drawing.Point(652, 57);
-            this.back_but.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.back_but.Margin = new System.Windows.Forms.Padding(4);
             this.back_but.Name = "back_but";
             this.back_but.Size = new System.Drawing.Size(180, 57);
             this.back_but.TabIndex = 5;
@@ -126,6 +126,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Составная разряженная матрица";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -140,7 +141,7 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.but_sparse);
             this.Controls.Add(this.but_simple);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();

@@ -16,11 +16,22 @@ namespace sr2_GUI.Composite
 
         public int column_count { get { return col; } }
 
-        public HorizontalGroupOfMatrix()
+        public HorizontalGroupOfMatrix(List<IMatrix> lis)
         {
-            row = 0;
-            col = 0;
             list_matr = new List<IMatrix>();
+            list_matr = lis;
+            row = 0;
+            col = 0; 
+
+            foreach (IMatrix matr in lis)
+            {
+                if (matr.row_count > row)
+                {
+                    row = matr.row_count;
+                }
+                col = col + matr.column_count;
+            }
+          
         }
 
         public void AddComponent(IMatrix matr)  //добавить матрицу
@@ -43,7 +54,7 @@ namespace sr2_GUI.Composite
                 {
                     for (int j = 0; j < matrix.column_count; j++)
                     {
-                        drawer.DrawUnit(matrix, i, j);
+                        drawer.DrawUnit(this, i, j);
                     }
                     
                 }
