@@ -18,7 +18,7 @@ namespace sr2_GUI
         SparseMatrix spars;
         DrawInConsole cons;
         DrawInForm form;
-        bool What_but = true;
+        int What_but = 0;
 
         public Form1()
         {
@@ -39,7 +39,7 @@ namespace sr2_GUI
 
             simp.Draw(cons);
             simp.Draw(form);
-            What_but = true;
+            What_but = 1;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -51,12 +51,12 @@ namespace sr2_GUI
             cons = new DrawInConsole(checkBox1.Checked);
             form = new DrawInForm(b, checkBox1.Checked);
 
-            if (What_but)
+            if (What_but == 1)
             {
                 simp.Draw(cons);
                 simp.Draw(form);
             }
-            else
+            else if (What_but == 2)
             {
                 spars.Draw(cons);
                 spars.Draw(form);
@@ -78,7 +78,7 @@ namespace sr2_GUI
 
             spars.Draw(cons);
             spars.Draw(form);
-            What_but = false;
+            What_but = 2;
         }
 
         private void renumb_but_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace sr2_GUI
             Renumbering_decorator decor;
 
 
-            if (What_but)
+            if (What_but == 1)
             {
                 decor = new Renumbering_decorator(simp);
             }
@@ -122,12 +122,12 @@ namespace sr2_GUI
             cons = new DrawInConsole(checkBox1.Checked);
             form = new DrawInForm(b, checkBox1.Checked);
 
-            if (What_but)
+            if (What_but ==1)
             {
                 simp.Draw(cons);
                 simp.Draw(form);
             }
-            else
+            else if (What_but ==2)
             {
                 spars.Draw(cons);
                 spars.Draw(form);
@@ -136,16 +136,15 @@ namespace sr2_GUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            HorizontalGroupOfMatrix horr_group = new HorizontalGroupOfMatrix();
             SimpleMatrix a = new SimpleMatrix(3, 3);
-            InitiatorMatrix.RandomMatr(a, 4, 100);
-
+            InitiatorMatrix.RandomMatr(a, 9, 100);
+            horr_group.AddComponent(a);
             SimpleMatrix m = new SimpleMatrix(3, 3);
-            InitiatorMatrix.RandomMatr(m, 2, 5);
-            List<IMatrix> lis = new List<IMatrix>();
-            lis.Add(a);
-            lis.Add(m);
-            HorizontalGroupOfMatrix horr_group = new HorizontalGroupOfMatrix(lis);
+            InitiatorMatrix.RandomMatr(m, 2, 7);
+            horr_group.AddComponent(m);
 
+            Console.Clear();
             b = picBox.CreateGraphics();
             b.Clear(BackColor);
 
@@ -153,21 +152,20 @@ namespace sr2_GUI
             form = new DrawInForm(b, checkBox1.Checked);
 
             horr_group.Draw(cons);
-            
+            horr_group.Draw(form);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SparseMatrix a = new SparseMatrix(3, 3);
-            InitiatorMatrix.RandomMatr(a, 4, 100);
-            
+            HorizontalGroupOfMatrix horr_group = new HorizontalGroupOfMatrix();
+            SparseMatrix a = new SparseMatrix(2, 2);
+            InitiatorMatrix.RandomMatr(a, 9, 100);
+            horr_group.AddComponent(a);
             SparseMatrix m = new SparseMatrix(3, 3);
-            InitiatorMatrix.RandomMatr(m, 2, 5);
-            List <IMatrix> lis = new List<IMatrix>();
-            lis.Add(a);
-            lis.Add(m);
-            HorizontalGroupOfMatrix horr_group = new HorizontalGroupOfMatrix(lis);
+            InitiatorMatrix.RandomMatr(m, 2, 7);
+            horr_group.AddComponent(m);
 
+            Console.Clear();
             b = picBox.CreateGraphics();
             b.Clear(BackColor);
 
@@ -175,6 +173,7 @@ namespace sr2_GUI
             form = new DrawInForm(b, checkBox1.Checked);
 
             horr_group.Draw(cons);
+            horr_group.Draw(form);
         }
     }
 }

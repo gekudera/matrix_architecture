@@ -15,7 +15,7 @@ namespace sr2_GUI
         private string border;
         private bool is_border;
         private IStrategy strategy;
-        private IMatrix matrix;
+        private int count_col;
 
         public DrawInConsole(bool is_bord)
         {
@@ -27,6 +27,7 @@ namespace sr2_GUI
 
         public void DrawBorder(IMatrix matr)
         {
+            count_col = matr.column_count;
             if (is_border)
             {
                 int border_len = matr.column_count * 8;
@@ -41,8 +42,7 @@ namespace sr2_GUI
 
         public void DrawUnit(IMatrix matr, int x, int y)
         {
-            matrix = matr;
-            strategy = matrix.GetStrategy();
+            strategy = matr.GetStrategy();
             buf_el = strategy.DrawConcreteUnit(matr,x,y);
 
             bufer.Add(buf_el);
@@ -57,7 +57,7 @@ namespace sr2_GUI
             for (int i=0; i<bufer.Count; i++)
             {
                 Console.Write(bufer[i]);
-                if ((i >= matrix.column_count) && (i % matrix.column_count == 0))
+                if ((i >= count_col) && (i % count_col == 0))
                 {
                     Console.WriteLine();
                 }

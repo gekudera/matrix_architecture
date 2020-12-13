@@ -26,6 +26,7 @@ namespace sr2_GUI
         private List<Point> points;
         private bool flag_border;
         private int count;
+        private int col_count = 0;
         private IStrategy strategy;
 
 
@@ -40,6 +41,7 @@ namespace sr2_GUI
 
         public void DrawBorder(IMatrix matr)
         {
+            col_count = matr.column_count;
             if (flag_border)
             {
                 int dlin = matr.row_count;
@@ -70,7 +72,7 @@ namespace sr2_GUI
             bufer.Add(rect_unit, data_unit);
 
             count++;
-            if (count == matr.column_count)
+            if (count == col_count)
             {
                 curX = startx;
                 curY = curY + h;
