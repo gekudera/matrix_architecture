@@ -17,7 +17,7 @@ namespace sr2_GUI
             }
             else
             {
-                data_unit += String.Format("{0,3:00}", matr.GetValue(x, y));
+                data_unit += String.Format("{0,4:00}", matr.GetValue(x, y));
             }
             return data_unit;
         }

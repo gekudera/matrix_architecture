@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sr2_GUI.Composite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -133,5 +134,24 @@ namespace sr2_GUI
             }
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            HorizontalGroupOfMatrix horr_group = new HorizontalGroupOfMatrix();
+            SimpleMatrix a = new SimpleMatrix(3, 3);
+            InitiatorMatrix.RandomMatr(a, 9, 100);
+            horr_group.AddComponent(a);
+            SimpleMatrix m = new SimpleMatrix(3, 3);
+            InitiatorMatrix.RandomMatr(m, 9, 7);
+            horr_group.AddComponent(m);
+
+            b = picBox.CreateGraphics();
+            b.Clear(BackColor);
+
+            cons = new DrawInConsole(checkBox1.Checked);
+            form = new DrawInForm(b, checkBox1.Checked);
+
+            horr_group.Draw(cons);
+            
+        }
     }
 }

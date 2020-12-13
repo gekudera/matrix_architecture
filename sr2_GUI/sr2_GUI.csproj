@@ -66,30 +66,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DrawInConsole.cs" />
-    <Compile Include="DrawInForm.cs" />
-    <Compile Include="IDrawing.cs" />
+    <Compile Include="Drawers\DrawInConsole.cs" />
+    <Compile Include="Drawers\DrawInForm.cs" />
+    <Compile Include="Drawers\IDrawing.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IMatrix.cs" />
-    <Compile Include="InitiatorMatrix.cs" />
-    <Compile Include="IStrategy.cs" />
-    <Compile Include="IVector.cs" />
+    <Compile Include="Models\IMatrix.cs" />
+    <Compile Include="Models\InitiatorMatrix.cs" />
+    <Compile Include="Composite\HorizontalGroupOfMatrix.cs" />
+    <Compile Include="Strategy\IStrategy.cs" />
+    <Compile Include="Models\IVector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Renumbering_decorator.cs" />
-    <Compile Include="SimpleMatrix.cs" />
-    <Compile Include="SimpleStrategy.cs" />
-    <Compile Include="SimpleVector.cs" />
-    <Compile Include="SomeMatrix.cs" />
-    <Compile Include="SparseMatrix.cs" />
-    <Compile Include="SparseStrategy.cs" />
-    <Compile Include="SparseVector.cs" />
-    <Compile Include="StatisticMatrix.cs" />
+    <Compile Include="Decorator\Renumbering_decorator.cs" />
+    <Compile Include="Models\SimpleMatrix.cs" />
+    <Compile Include="Strategy\SimpleStrategy.cs" />
+    <Compile Include="Models\SimpleVector.cs" />
+    <Compile Include="Models\SomeMatrix.cs" />
+    <Compile Include="Models\SparseMatrix.cs" />
+    <Compile Include="Strategy\SparseStrategy.cs" />
+    <Compile Include="Models\SparseVector.cs" />
+    <Compile Include="Models\StatisticMatrix.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,5 +128,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,8 +14,8 @@ namespace sr2_GUI
         private string buf_el;
         private string border;
         private bool is_border;
-        private int count;
         private IStrategy strategy;
+        private IMatrix matrix;
 
         public DrawInConsole(bool is_bord)
         {
@@ -41,18 +41,12 @@ namespace sr2_GUI
 
         public void DrawUnit(IMatrix matr, int x, int y)
         {
-            strategy = matr.GetStrategy();
+            matrix = matr;
+            strategy = matrix.GetStrategy();
             buf_el = strategy.DrawConcreteUnit(matr,x,y);
 
             bufer.Add(buf_el);
             bufer[bufer.LastIndexOf(buf_el)] = String.Format("| {0} |", buf_el);
-
-            count++;
-            if (count == matr.column_count)
-            {
-                bufer.Add("\n");
-                count = 0;
-            }
 
         }
 
@@ -60,10 +54,15 @@ namespace sr2_GUI
         {
             bufer.Insert(0, border); //если DrawBorder не вызывалось, то рамка не отрисуется, ведь border  -пустая
             bufer.Add(border);
-            foreach (string item in bufer)
+            for (int i=0; i<bufer.Count; i++)
             {
-                Console.Write(item);
+                Console.Write(bufer[i]);
+                if ((i >= matrix.column_count) && (i % matrix.column_count == 0))
+                {
+                    Console.WriteLine();
+                }
             }
+
             bufer.Clear();
             buf_el = "";
             border = "";

@@ -18,3 +18,13 @@ D:\МОИ программы\4 курс. Документы\Шаблоны пр�
 D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\git_project\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.csproj.CoreCompileInputs.cache
 D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\git_project\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.exe
 D:\МОИ программы\4 курс. Документы\Шаблоны проектирования\git_project\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.pdb
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\bin\Debug\sr2_GUI.exe.config
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\bin\Debug\sr2_GUI.exe
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\bin\Debug\sr2_GUI.pdb
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.csprojAssemblyReference.cache
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.Form1.resources
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.Properties.Resources.resources
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.csproj.GenerateResource.cache
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.exe
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.pdb
+C:\для учебы\Patterns\matrix_architecture\sr2_GUI\obj\Debug\sr2_GUI.csproj.CoreCompileInputs.cache
