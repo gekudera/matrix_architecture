@@ -30,7 +30,14 @@ namespace sr2_GUI
 
         public double GetValue(int i, int j)
         {
-            return (matr[i].GetValue(j));
+            if ((i < row) && (j < col))
+            { 
+                return (matr[i].GetValue(j));
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public void Draw(IDrawing drawer)

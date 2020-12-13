@@ -34,7 +34,7 @@ namespace sr2_GUI
             cons = new DrawInConsole(checkBox1.Checked);
             form = new DrawInForm(b, checkBox1.Checked);
 
-            simp = new SimpleMatrix(7, 7);
+            simp = new SimpleMatrix(7, 6);
             InitiatorMatrix.RandomMatr(simp, 40, 100);
 
             simp.Draw(cons);
@@ -137,8 +137,8 @@ namespace sr2_GUI
         private void button1_Click_1(object sender, EventArgs e)
         {
             HorizontalGroupOfMatrix horr_group = new HorizontalGroupOfMatrix();
-            SimpleMatrix a = new SimpleMatrix(3, 3);
-            InitiatorMatrix.RandomMatr(a, 9, 100);
+            SimpleMatrix a = new SimpleMatrix(2, 2);
+            InitiatorMatrix.RandomMatr(a, 4, 100);
             horr_group.AddComponent(a);
             SimpleMatrix m = new SimpleMatrix(3, 3);
             InitiatorMatrix.RandomMatr(m, 2, 7);
@@ -159,9 +159,9 @@ namespace sr2_GUI
         {
             HorizontalGroupOfMatrix horr_group = new HorizontalGroupOfMatrix();
             SparseMatrix a = new SparseMatrix(2, 2);
-            InitiatorMatrix.RandomMatr(a, 9, 100);
+            InitiatorMatrix.RandomMatr(a, 4, 100);
             horr_group.AddComponent(a);
-            SparseMatrix m = new SparseMatrix(3, 3);
+            SparseMatrix m = new SparseMatrix(4, 4);
             InitiatorMatrix.RandomMatr(m, 2, 7);
             horr_group.AddComponent(m);
 
