@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decorator\Transponir_decorator.cs" />
     <Compile Include="Drawers\DrawInConsole.cs" />
     <Compile Include="Drawers\DrawInForm.cs" />
     <Compile Include="Drawers\IDrawing.cs" />

@@ -53,7 +53,7 @@ namespace sr2_GUI.Composite
 
         public IStrategy GetStrategy()
         {
-            return (list_matr[0].GetStrategy());
+            return (list_matr[0].GetStrategy()); 
         }
 
         public double GetValue(int i, int j)
@@ -100,5 +100,6 @@ namespace sr2_GUI.Composite
             }
 
         }
+
     }
 }

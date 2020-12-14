@@ -8,7 +8,7 @@ namespace sr2_GUI
 {
     class InitiatorMatrix
     {
-        public static void RandomMatr(SomeMatrix sm, int not_nul, int max)
+        public static void RandomMatr(IMatrix sm, int not_nul, int max)
         {
             Random rnd = new Random();
             int until = not_nul;

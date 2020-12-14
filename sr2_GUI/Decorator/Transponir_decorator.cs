@@ -2,32 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
+using System.Threading.Tasks;
 
-namespace sr2_GUI
+namespace sr2_GUI.Decorator
 {
-    class Renumbering_decorator : IMatrix
+    class Transponir_decorator : IMatrix //еще в процессе разработки
     {
+
         public int row_count => Ref_matr.row_count;
         public int column_count => Ref_matr.column_count;
 
 
-        private IMatrix Ref_matr;
+        public IMatrix Ref_matr;
+        private List<IMatrix> list;
         private int[] rows;
         private int[] columns;
 
-        public Renumbering_decorator(IMatrix matr)
+        public Transponir_decorator(IMatrix matr)
         {
             this.Ref_matr = matr;
-
+            
             rows = new int[Ref_matr.row_count];
-            for (int i=0; i<Ref_matr.row_count; i++)
+            for (int i = 0; i < Ref_matr.row_count; i++)
             {
                 rows[i] = i;
             }
 
             columns = new int[Ref_matr.column_count];
-            for (int j=0; j<Ref_matr.column_count; j++)
+            for (int j = 0; j < Ref_matr.column_count; j++)
             {
                 columns[j] = j;
             }
@@ -62,23 +64,16 @@ namespace sr2_GUI
             return Ref_matr.GetStrategy();
         }
 
-        public void Renumber_сol(int first, int second) //поменять столбики местами
+        public void Transpon() 
         {
-            if ((first < Ref_matr.column_count) && (second < Ref_matr.column_count))
+            for (int i=0; i<column_count; i++)
             {
-                rows[first] = second;
-                rows[second] = first;
+
+
             }
         }
 
-        public void Renumber_row(int first, int second) //поменять строчки местами
-        {
-            if ((first < Ref_matr.row_count) && (second < Ref_matr.row_count))
-            {
-                columns[first] = second;
-                columns[second] = first;
-            }
-        }
+       
+    } 
 
-    }
 }
