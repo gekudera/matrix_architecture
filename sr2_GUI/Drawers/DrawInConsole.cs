@@ -15,7 +15,7 @@ namespace sr2_GUI
         private string border;
         private bool is_border;
         private IStrategy strategy;
-        private int count_col, count;
+        private int count_col;
 
         public DrawInConsole(bool is_bord)
         {
@@ -23,7 +23,6 @@ namespace sr2_GUI
             buf_el = "";
             border = "";
             is_border = is_bord;
-            count = 0;
         }
 
         public void DrawBorder(IMatrix matr)

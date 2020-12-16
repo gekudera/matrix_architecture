@@ -10,7 +10,7 @@ namespace sr2_GUI
     {
         public string DrawConcreteUnit(IMatrix matr, int x, int y)
         {
-            string data_unit = string.Format("{0,3:00}", matr.GetValue(x, y));
+            string data_unit = string.Format("{0,4:00}", matr.GetValue(x, y));
             return data_unit;
         }
     }

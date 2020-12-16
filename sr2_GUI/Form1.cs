@@ -166,7 +166,7 @@ namespace sr2_GUI
 
             Console.WriteLine("  ");
             decor.Draw(cons);
-            //decor.Draw(form);
+            decor.Draw(form);
         }
     }
 }

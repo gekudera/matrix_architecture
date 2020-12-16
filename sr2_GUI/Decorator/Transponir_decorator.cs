@@ -8,9 +8,9 @@ namespace sr2_GUI
 {
     class Transponir_decorator : IMatrix //еще в процессе разработки
     {
-
-        public int row_count => Ref_matr.row_count;
-        public int column_count => Ref_matr.column_count;
+        private int row, col;
+        public int row_count { get { return row; } }
+        public int column_count { get { return col; } }
 
         private List<IMatrix> list;
         private IMatrix Ref_matr;
@@ -19,14 +19,33 @@ namespace sr2_GUI
         {
             this.list = matr.CopyList();
             this.Ref_matr = matr;
+            row = 0;
+            col = 0;
+            foreach (IMatrix matrix in list)
+            {
+                if (matrix.column_count >= col)
+                {
+                    col = matrix.column_count;
+                }
+                row = row + matrix.row_count;
+            }
         }
 
         public void Draw(IDrawing drawer)
         {
+            drawer.DrawBorder(this);
             foreach (IMatrix matrix in list)
             {
-                matrix.Draw(drawer);
+                
+                for (int i = 0; i < matrix.row_count; i++)
+                {
+                    for (int j = 0; j < col; j++)
+                    {
+                        drawer.DrawUnit(matrix, i, j);
+                    }
+                }
             }
+            drawer.Print();
         }
 
         public double GetValue(int i, int j)
