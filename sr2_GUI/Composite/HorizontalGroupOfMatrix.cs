@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sr2_GUI.Composite
+namespace sr2_GUI
 {
     class HorizontalGroupOfMatrix : IMatrix
     {
         private int row, col;
+        private int number;                //переменная с номером матрицы, стратегию которой мы хотим получить
         private int cur_matr, rememb;
         private List <IMatrix> list_matr;  //переменная-список из ссылок на объекты Матриц
 
@@ -20,6 +21,7 @@ namespace sr2_GUI.Composite
         {
             row = 0;
             col = 0;
+            number = 0;
             list_matr = new List<IMatrix>();
         }
 
@@ -53,7 +55,7 @@ namespace sr2_GUI.Composite
 
         public IStrategy GetStrategy()
         {
-            return (list_matr[0].GetStrategy()); 
+            return (list_matr[number].GetStrategy()); 
         }
 
         public double GetValue(int i, int j)
@@ -99,6 +101,16 @@ namespace sr2_GUI.Composite
                 (list_matr[cur_matr]).SetValue(chisl, i, j);
             }
 
+        }
+
+        public void SetNumber(int num)
+        {
+            this.number = num;
+        }
+
+        public List<IMatrix> CopyList()  //используется только в транспонированном декораторе
+        {
+            return list_matr;
         }
 
     }

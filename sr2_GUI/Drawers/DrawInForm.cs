@@ -106,5 +106,6 @@ namespace sr2_GUI
             points.Clear();
            
         }
+
     }
 }

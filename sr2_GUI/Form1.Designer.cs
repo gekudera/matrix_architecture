@@ -36,6 +36,7 @@
             this.back_but = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +87,7 @@
             // 
             // renumb_but
             // 
-            this.renumb_but.Location = new System.Drawing.Point(445, 57);
+            this.renumb_but.Location = new System.Drawing.Point(442, 37);
             this.renumb_but.Margin = new System.Windows.Forms.Padding(4);
             this.renumb_but.Name = "renumb_but";
             this.renumb_but.Size = new System.Drawing.Size(180, 57);
@@ -97,7 +98,7 @@
             // 
             // back_but
             // 
-            this.back_but.Location = new System.Drawing.Point(652, 57);
+            this.back_but.Location = new System.Drawing.Point(647, 37);
             this.back_but.Margin = new System.Windows.Forms.Padding(4);
             this.back_but.Name = "back_but";
             this.back_but.Size = new System.Drawing.Size(180, 57);
@@ -128,11 +129,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(526, 102);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(180, 57);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Транспонировать";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 703);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.back_but);
@@ -160,6 +173,7 @@
         private System.Windows.Forms.Button back_but;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

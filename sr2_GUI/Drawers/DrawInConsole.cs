@@ -15,7 +15,7 @@ namespace sr2_GUI
         private string border;
         private bool is_border;
         private IStrategy strategy;
-        private int count_col;
+        private int count_col, count;
 
         public DrawInConsole(bool is_bord)
         {
@@ -23,6 +23,7 @@ namespace sr2_GUI
             buf_el = "";
             border = "";
             is_border = is_bord;
+            count = 0;
         }
 
         public void DrawBorder(IMatrix matr)
@@ -47,7 +48,6 @@ namespace sr2_GUI
 
             bufer.Add(buf_el);
             bufer[bufer.LastIndexOf(buf_el)] = String.Format("| {0} |", buf_el);
-
         }
 
         public void Print()
@@ -68,4 +68,5 @@ namespace sr2_GUI
             border = "";
         }
     }
+
 }

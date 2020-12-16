@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sr2_GUI.Decorator
+namespace sr2_GUI
 {
     class Transponir_decorator : IMatrix //еще в процессе разработки
     {
@@ -12,41 +12,21 @@ namespace sr2_GUI.Decorator
         public int row_count => Ref_matr.row_count;
         public int column_count => Ref_matr.column_count;
 
-
-        public IMatrix Ref_matr;
         private List<IMatrix> list;
-        private int[] rows;
-        private int[] columns;
+        private IMatrix Ref_matr;
 
-        public Transponir_decorator(IMatrix matr)
+        public Transponir_decorator(HorizontalGroupOfMatrix matr)
         {
+            this.list = matr.CopyList();
             this.Ref_matr = matr;
-            
-            rows = new int[Ref_matr.row_count];
-            for (int i = 0; i < Ref_matr.row_count; i++)
-            {
-                rows[i] = i;
-            }
-
-            columns = new int[Ref_matr.column_count];
-            for (int j = 0; j < Ref_matr.column_count; j++)
-            {
-                columns[j] = j;
-            }
         }
 
         public void Draw(IDrawing drawer)
         {
-            drawer.DrawBorder(this.Ref_matr);
-
-            for (int i = 0; i < row_count; i++)
+            foreach (IMatrix matrix in list)
             {
-                for (int j = 0; j < column_count; j++)
-                {
-                    drawer.DrawUnit(this.Ref_matr, rows[i], columns[j]);
-                }
+                matrix.Draw(drawer);
             }
-            drawer.Print();
         }
 
         public double GetValue(int i, int j)
@@ -64,16 +44,6 @@ namespace sr2_GUI.Decorator
             return Ref_matr.GetStrategy();
         }
 
-        public void Transpon() 
-        {
-            for (int i=0; i<column_count; i++)
-            {
-
-
-            }
-        }
-
        
     } 
-
 }

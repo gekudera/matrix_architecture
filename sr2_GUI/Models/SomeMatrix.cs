@@ -56,5 +56,6 @@ namespace sr2_GUI
         }
 
         public abstract IStrategy GetStrategy();
+
     }
 }

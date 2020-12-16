@@ -1,4 +1,4 @@
-﻿using sr2_GUI.Composite;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +17,7 @@ namespace sr2_GUI
         IMatrix current_matrix;
         DrawInConsole cons;
         DrawInForm form;
+        HorizontalGroupOfMatrix hor_gr;
 
         public Form1()
         {
@@ -108,11 +109,11 @@ namespace sr2_GUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            HorizontalGroupOfMatrix hor_gr = new HorizontalGroupOfMatrix();
+            hor_gr = new HorizontalGroupOfMatrix();
             SimpleMatrix a = new SimpleMatrix(2, 2);
             InitiatorMatrix.RandomMatr(a, 4, 100);
             hor_gr.AddComponent(a);
-            SimpleMatrix m = new SimpleMatrix(5, 4);
+            SparseMatrix m = new SparseMatrix(5, 4);
             InitiatorMatrix.RandomMatr(m, 5, 7);
             hor_gr.AddComponent(m);
 
@@ -131,7 +132,7 @@ namespace sr2_GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            HorizontalGroupOfMatrix hor_gr = new HorizontalGroupOfMatrix();
+            hor_gr = new HorizontalGroupOfMatrix();
             SparseMatrix a = new SparseMatrix(2, 2);
             InitiatorMatrix.RandomMatr(a, 4, 100);
             hor_gr.AddComponent(a);
@@ -150,6 +151,22 @@ namespace sr2_GUI
             current_matrix.Draw(cons);
             current_matrix.Draw(form);
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            b = picBox.CreateGraphics();
+            b.Clear(BackColor);
+
+            cons = new DrawInConsole(checkBox1.Checked);
+            form = new DrawInForm(b, checkBox1.Checked);
+            Transponir_decorator decor;
+
+            decor = new Transponir_decorator(hor_gr);
+
+            Console.WriteLine("  ");
+            decor.Draw(cons);
+            //decor.Draw(form);
         }
     }
 }
